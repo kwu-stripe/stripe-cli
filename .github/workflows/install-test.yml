@@ -28,7 +28,7 @@ jobs:
       - run: bash scripts/install-test.sh apt
   yum:
     runs-on: ubuntu-latest
-    container: ubuntu:18.04
+    container: fedora:latest
     steps:
       - run: |
           mkdir /etc/yum.repos.d
