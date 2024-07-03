@@ -35,7 +35,10 @@ jobs:
           if [ ! -d "/etc/yum.repos.d" ]; then
               sudo mkdir /etc/yum.repos.d
           fi
-          echo "[Stripe]\nname=stripe\nbaseurl=https://packages.stripe.dev/stripe-cli-rpm-local/\nenabled=1\ngpgcheck=0" | sudo tee /etc/yum.repos.d/stripe.repo
+          echo "[Stripe]
+          name=stripe
+          baseurl=https://packages.stripe.dev/stripe-cli-rpm-local/
+          enabled=1\ngpgcheck=0" | sudo tee /etc/yum.repos.d/stripe.repo
 
       - uses: actions/checkout@v4
         with:
